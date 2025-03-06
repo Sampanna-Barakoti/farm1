@@ -233,6 +233,13 @@ if (!isset($_SESSION["isLogedIn"])) {
 
                             </li>
 
+                            <li class="btn-consult">
+                                <a href="<?= $_SESSION["directory"] ?>farmer/fconsult.php">
+                                    Consultation
+                                </a>
+
+                            </li>
+
                         <?php } ?>
 
 
