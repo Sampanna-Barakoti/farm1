@@ -80,9 +80,8 @@ if (!isset($_SESSION["isLogedIn"])) {
                         <div class="col-xs-3 custom-col-left form-group">
                             <div class="spa-search">
                                 <form action="<?= $_SESSION["directory"] ?>farmer/cropsearch.php" method="post">
-                                    <input type="text" placeholder="search your keyword ..." value="" class="form-control input-group-lg" style="width: 150%" name="Search">
-                                    <!--<button type="submit" class="spa-submit btn btn-default" name="serachButton"><i class="fa fa-search" aria-hidden="true"></i>
-                                    </button>-->
+                                    <input type="text" placeholder="search your keyword ..." value="" class="form-control input-group-lg" style="width: 200%" name="Search">
+
                                 </form>
 
                             </div>
@@ -92,7 +91,7 @@ if (!isset($_SESSION["isLogedIn"])) {
                             <li>
 
                                 <?php if ((isset($_SESSION["isLogedIn"]) && $_SESSION["isLogedIn"] == true) && (isset($_SESSION["role"]) && $_SESSION["role"] == "0")) { ?>
-                                    <a href="<?= $_SESSION["directory"] ?>farmer/fprofile.php">Account</a>
+                                    <a href="<?= $_SESSION["directory"] ?>farmer/fprofile.php">Your Account</a>
                                 <?php  } ?>
                             </li>
 
@@ -125,7 +124,7 @@ if (!isset($_SESSION["isLogedIn"])) {
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?= $_SESSION["directory"] ?>home.php">
-                        <img id="logo-header" src="<?= $_SESSION["directory"] ?>img/logo.png" alt="Logo" style="width: 150px; height: inherit;">
+                        <img id="logo-header" src="<?= $_SESSION["directory"] ?>img/loko.png" alt="Logo" style="width: 13   0px; height: inherit;">
                     </a>
                 </div>
 
@@ -200,9 +199,11 @@ if (!isset($_SESSION["isLogedIn"])) {
 
                                     <li><a href="<?= $_SESSION["directory"] ?>admin/Editcar.php">Vegetable</a></li>
                                     <li><a href="<?= $_SESSION["directory"] ?>admin/EditBike.php">Fruit</a></li>
+
                                 <?php } else {  ?>
                                     <li><a href="<?= $_SESSION["directory"] ?>farmer/editveggie.php">Vegetable</a></li>
                                     <li><a href="<?= $_SESSION["directory"] ?>farmer/editfruit.php">Fruit</a></li>
+                                    <li><a href="<?= $_SESSION["directory"] ?>farmer/VegFrtRate.php">Vege Rate</a></li>
                                 <?php } ?>
                             </ul>
                         </li>
@@ -240,15 +241,24 @@ if (!isset($_SESSION["isLogedIn"])) {
 
                             </li>
 
+                            <li class="btn-weather">
+                                <a href="<?= $_SESSION["directory"] ?>farmer/WeatherForcast.php">
+                                    Weather Info.
+                                </a>
+
+                            </li>
+
+                            <li class="btn-Faq">
+                                <a href="<?= $_SESSION["directory"] ?>customer/faq.php">
+                                    FAQ
+                                </a>
+
+                            </li>
+
                         <?php } ?>
 
 
                         <!-- End Promotion -->
-
-
-
-
-
 
 
                     </ul>

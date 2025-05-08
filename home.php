@@ -20,21 +20,21 @@ include("fheader.php");
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active beactive">
-                    <img src="img/brand/brand1.jpg" alt="..." style="width: 100%; height: 10%;">
+                    <img src="img/brand/brand1.jpg" alt="..." style="width: 100%; height: 3%;">
                     <div class="carousel-caption">
                         <h2>Welcome to Crop Auction</h2>
 
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/brand/live-024049.jpg" alt="..." style="width: 100%; height: 10%;">
+                    <img src="img/brand/live-024049.jpg" alt="..." style="width: 100%; height: 3%;">
                     <div class="carousel-caption">
                         <h2>All kinds of Crops</h2>
 
                     </div>
                 </div>
                 <div class="item">
-                    <img src="img/brand/brand3.jpg" alt="..." style="width: 100%; height: 10%;">
+                    <img src="img/brand/brand3.jpg" alt="..." style="width: 100%; height: 3%;">
                     <div class="carousel-caption">
                         <h2>BID The crop</h2>
 
@@ -196,7 +196,7 @@ include("fheader.php");
                                             <div class="product-grid-inner">
                                                 <div class="product-grid-img">
                                                     <ul class="product-labels">
-                                                        <li><?php date_default_timezone_set("Asia/Kolkata");
+                                                        <li><?php date_default_timezone_set("Asia/Kathmandu");
 
                                                             $nowDate = date("Y-m-d");
 

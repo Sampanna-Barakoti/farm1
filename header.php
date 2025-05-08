@@ -80,7 +80,7 @@ if (!isset($_SESSION["isLogedIn"])) {
                         <div class="col-xs-3 custom-col-left form-group">
                             <div class="spa-search">
                                 <form action="<?= $_SESSION["directory"] ?>customer/cropsearch.php" method="post">
-                                    <input type="text" placeholder="Search Crop ..." value="" class="form-control input-group-lg" style="width: 100%" name="Search">
+                                    <input type="text" placeholder="Search Crop ..." value="" class="form-control input-group-lg" style="width: 200%" name="Search">
 
                                 </form>
 
@@ -91,7 +91,7 @@ if (!isset($_SESSION["isLogedIn"])) {
                             <li>
 
                                 <?php if ((isset($_SESSION["isLogedIn"]) && $_SESSION["isLogedIn"] == true) && (isset($_SESSION["role"]) && $_SESSION["role"] == "0")) { ?>
-                                    <a href="<?= $_SESSION["directory"] ?>customer/profile.php">Account</a>
+                                    <a href="<?= $_SESSION["directory"] ?>customer/profile.php">Your Account</a>
                                 <?php  } ?>
                             </li>
 
@@ -124,7 +124,7 @@ if (!isset($_SESSION["isLogedIn"])) {
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?= $_SESSION["directory"] ?>index.php">
-                        <img id="logo-header" src="<?= $_SESSION["directory"] ?>img/logo.png" alt="Logo" style="width: 100px; height: inherit;">
+                        <img id="logo-header" src="<?= $_SESSION["directory"] ?>img/loko.png" alt="Logo" style="width: 130px; height: inherit;">
                     </a>
                 </div>
 

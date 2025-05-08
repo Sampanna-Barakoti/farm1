@@ -1,152 +1,88 @@
-<?php
-// Sample consultant data categorized by job types
-$categories = [
-    "Veterinarian" => [
-        [
-            "id" => 1,
-            "name" => "Dr. Manish Sharma",
-            "address" => "Dhobighat, Lalitpur",
-            "phone" => "98473627847",
-            "email" => "manish12@gmail.com",
-            "background" => "Expert in animal health and welfare with 12 years of experience."
-        ]
-    ],
-    "Soil Tester" => [
-        [
-            "id" => 2,
-            "name" => "Ms. Bibek Bhandari",
-            "address" => "Bafal, kathmandu",
-            "phone" => "9875252732",
-            "email" => "bibek123@gmail.com",
-            "background" => "Specialist in soil quality analysis and land fertility management."
-        ]
-    ],
-    "Crop tester" => [
-        [
-            "id" => 2,
-            "name" => "Dr. Amrit Moktan",
-            "address" => "Samakushi, kathmandu",
-            "phone" => "9838459385",
-            "email" => "amrit23@gmail.com",
-            "background" => "Specialist in soil quality analysis and land fertility management."
-        ]
-    ]
-];
+<?php include("../fheader.php"); ?>
 
-// Check if details are requested
-if (isset($_GET['id'])) {
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin: 50px;
+
+    }
+
+    .grid-item {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        text-align: center;
+        background-color: rgb(154, 235, 173);
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+    }
+
+    .book-btn {
+        background: #28a745;
+    }
+
+    .call-btn {
+        background: #007bff;
+
+    }
+
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+
+
+    }
+</style>
+
+<h2>Consultant List</h2>
+<div class="grid-container">
+    <?php
+    $categories = [
+        "Crop Health Doctor" => [
+            ["name" => "Dr. Manish Sharma", "address" => "Basundhara, Kathmandu", "phone" => "9836372732", "email" => "manish13@gmail.com", "background" => "Expert in crop health with 12 years of experience."]
+        ],
+        "Soil Tester" => [
+            ["name" => "Rajesh Patel", "address" => "Bhaktapur, Nepal", "phone" => "9825637283", "email" => "rajesh.patel@gmail.com", "background" => "Soil quality expert with 8 years of experience."]
+        ]
+    ];
+
     foreach ($categories as $category => $consultants) {
         foreach ($consultants as $consultant) {
-            if ($consultant['id'] == $_GET['id']) {
-                echo "<html><head><style>
-                    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-                    .container { width: 60%; margin: auto; background: white; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-top: 20px; }
-                    h1, h2 { color: #333; }
-                    .back-btn { display: inline-block; padding: 8px 12px; margin-top: 10px; background: #007BFF; color: white; text-decoration: none; border-radius: 5px; }
-                    .back-btn:hover { background:rgb(0, 179, 81); }
-                </style></head><body>";
-                echo "<div class='container'>";
-                echo "<h2>Details of " . htmlspecialchars($consultant['name']) . "</h2>";
-                echo "<p><strong>Category:</strong> " . htmlspecialchars($category) . "</p>";
-                echo "<p><strong>Address:</strong> " . htmlspecialchars($consultant['address']) . "</p>";
-                echo "<p><strong>Phone:</strong> " . htmlspecialchars($consultant['phone']) . "</p>";
-                echo "<p><strong>Email:</strong> " . htmlspecialchars($consultant['email']) . "</p>";
-                echo "<p><strong>Background:</strong> " . htmlspecialchars($consultant['background']) . "</p>";
-                echo "<a class='back-btn' href='?'>Back to List</a>";
-                echo "</div></body></html>";
-                exit;
-            }
+            echo "<div class='grid-item'>";
+            echo "<h3>{$category}</h3>";
+            echo "<p><strong>Name:</strong> {$consultant['name']}</p>";
+            echo "<p><strong>Experience:</strong> {$consultant['background']}</p>";
+            echo "<p><strong>Job:</strong> {$category}</p>";
+            echo "<p><strong>Contact:</strong> {$consultant['phone']}</p>";
+            echo "<p><strong>Email:</strong> {$consultant['email']}</p>";
+            echo "<a href='fbook.php' class='btn book-btn'>Book Now</a>";
+            echo "<a href='https://www.messenger.com/groupcall/ROOM:27029301890046958/?call_id=2252966079&has_video=true&initialize_video=true&is_e2ee_mandated=true&nonce=445akuin306h&referrer_context=zenon_precall&thread_type=15&users_to_ring[0]=100073412345874&use_joining_context=true&peer_id=100073412345874&av=61554799644991&server_info_data=GANsbGEoEG1UYVlLckRkeXhGZ1doeFgW3O%2F2mrjAg2AA' class='btn call-btn'>Call</a>";
+            echo "</div>";
         }
     }
-    echo "<p>Consultant not found.</p>";
-}
-?>
+    ?>
+</div>
 
-<!DOCTYPE html>
-<html>
+<h2>Modern Agriculture Techniques</h2>
+<div class="video-container">
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/lXUeM2yz4FI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/v=3KuCMBtIC9g" frameborder="0" allowfullscreen></iframe>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/v=QPAILHFuhDA" frameborder="0" allowfullscreen></iframe>
+</div>
 
-<head>
-    <title>Consultation Professionals</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 60%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        h1,
-        h2 {
-            color: #333;
-        }
-
-        .category {
-            margin-bottom: 20px;
-        }
-
-        .category-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .consultant-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .consultant-item {
-            padding: 15px;
-            background: #fff;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .view-btn {
-            display: inline-block;
-            padding: 8px 12px;
-            margin-top: 10px;
-            background: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .view-btn:hover {
-            background: rgb(0, 179, 81);
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <h1>Consultation Professionals</h1>
-        <?php foreach ($categories as $category => $consultants): ?>
-            <div class="category">
-                <h2 class="category-title"> <?php echo htmlspecialchars($category); ?> </h2>
-                <ul class="consultant-list">
-                    <?php foreach ($consultants as $consultant): ?>
-                        <li class="consultant-item">
-                            <strong><?php echo htmlspecialchars($consultant['name']); ?></strong><br>
-                            <?php echo htmlspecialchars($consultant['background']); ?><br>
-                            <a class="view-btn" href="?id=<?php echo $consultant['id']; ?>">View Details</a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        <?php endforeach; ?>
-    </div>
-</body>
-
-</html>
+<?php include("../footer.php"); ?>
