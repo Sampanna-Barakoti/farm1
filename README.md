@@ -6,7 +6,7 @@
 
 ## 🎯 Project Objective
 
-- Build a transparent, farmer-first digital marketplace
+- Build a transparent, farmer-first digital marketplace (One Stop Solution)
 - Enable **direct communication** between farmers and buyers
 - Increase **profit margins** for farmers by eliminating intermediaries
 - Promote **sustainable agriculture** through digital tools
