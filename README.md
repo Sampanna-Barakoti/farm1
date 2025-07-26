@@ -1,4 +1,4 @@
-# 🌾 E-Farming System – Hackathon Project
+# 🌾 E-Farming System – Hackathon Won Project
 
 **E-Farming System** is a web-based platform developed during a **college hackathon** aimed at empowering farmers by connecting them directly to wholesalers. The system removes middlemen from the agricultural supply chain, ensuring **fair pricing** and **better market access** for farmers.
 
@@ -20,9 +20,9 @@
 | **HTML**   | Markup for structuring web pages   |
 | **CSS**    | Styling and layout                 |
 | **PHP**    | Server-side scripting              |
-| **MySQL**  | Database for storing user & product data |
+| **MariaDB**  | Database for storing user & product data |
 
----
+
 
 ## 🧩 Key Features
 
